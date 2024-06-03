@@ -6,8 +6,8 @@ module.exports = {
   entry: "./src/app.ts",
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "public"),
-    publicPath: "/Task-Manager-Bundle/public/",
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "/Task-Manager-Bundle/dist/",
   },
   module: {
     rules: [
