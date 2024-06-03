@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
-    "build": "webpack --config webpack.config.js",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "clean": "rimraf ./dist",
+    "build": "npm run clean && webpack --config webpack.config.js"
   },
   "license": "ISC",
   "devDependencies": {
