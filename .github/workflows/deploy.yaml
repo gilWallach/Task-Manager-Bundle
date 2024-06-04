@@ -11,6 +11,8 @@ jobs:
 
     steps:
       - name: Checkout repository
+        env: 
+          GH_ACTION_TOKEN: ${{ secrets.GH_ACTION_TOKEN }}
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.GH_ACTION_TOKEN }}
