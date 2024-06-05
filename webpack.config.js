@@ -8,8 +8,8 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/Task-Manager-Bundle/", // Adjust to your repository name
-    // publicPath: "/", // Adjust to your repository name
+    // publicPath: "/Task-Manager-Bundle/", // Adjust to your repository name
+    publicPath: "/", // Adjust to your repository name
   },
   module: {
     rules: [
