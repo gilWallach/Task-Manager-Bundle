@@ -11,10 +11,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-
         uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GH_ACTION_TOKEN }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -31,4 +28,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_ACTION_TOKEN }}
-          publish_dir: ./dist 
+          publish_dir: ./dist
