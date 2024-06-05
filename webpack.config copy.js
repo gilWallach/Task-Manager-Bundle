@@ -2,12 +2,12 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "production",  // Use production mode for deployment
+  mode: "development",
   entry: "./src/app.ts",
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/", // This should be root-relative
+    publicPath: "/",
   },
   module: {
     rules: [
@@ -28,8 +28,14 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html", // Ensure this points to your HTML template
+      template: "./src/index.html",
     }),
   ],
-  devtool: "source-map", // Use full source maps for production
+  devtool: "inline-source-map",
+  // devServer: {
+  //   contentBase: path.join(__dirname, "dist"),
+  //   compress: true,
+  //   port: 9000,
+  //   historyApiFallback: true, // Ensures the correct routing
+  // },
 };
