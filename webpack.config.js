@@ -7,7 +7,7 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/Task-Manager-Bundle/dist/",
+    publicPath: "/",
   },
   module: {
     rules: [
@@ -28,8 +28,14 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html", // Ensure this points to your HTML template
+      template: "./src/index.html",
     }),
   ],
   devtool: "inline-source-map",
+  // devServer: {
+  //   contentBase: path.join(__dirname, "dist"),
+  //   compress: true,
+  //   port: 9000,
+  //   historyApiFallback: true, // Ensures the correct routing
+  // },
 };

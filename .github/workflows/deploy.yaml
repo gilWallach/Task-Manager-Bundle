@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+    # secrets:
+    #   PERSONAL_ACCESS_TOKEN:
+    #   required: true
 
 jobs:
   build:
@@ -11,8 +14,8 @@ jobs:
 
     steps:
       - name: Checkout repository
-        env: 
-          GH_ACTION_TOKEN: ${{ secrets.GH_ACTION_TOKEN }}
+        # env: 
+        #   GH_ACTION_TOKEN: ${{ secrets.GH_ACTION_TOKEN }}
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.GH_ACTION_TOKEN }}
