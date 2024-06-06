@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Task Manager</title>
     <link rel="icon" type="image/x-icon" href="/src/assets/icons/check-square.svg">
-    <!-- <script type="module" src="/dist/bundle.js"></script> -->
-  </head>
-  <body>
+    <script src="/Task-Manager-Bundle/bundle.js" defer></script>
+</head>
+<body>
     <template id="task-input">
       <form class="task-form content flex space-between">
         <div class="flex column space-between">
@@ -63,16 +63,13 @@
         <h4 id="message"></h4>
       </div>
     </template>
+
     <div id="app" class="main-layout">
       <div class="headder full">
         <div class="main-layout">
           <div class="content flex space-between">
             <h1 class="content">Task Manager</h1>
-            <img
-              class="content"
-              src="./src/assets/icons/check-square.svg"
-              alt=""
-            />
+            <img class="content" src="./src/assets/icons/check-square.svg" alt=""/>
           </div>
         </div>
       </div>
@@ -81,5 +78,5 @@
         <section id="lists-wraper" class="flex column"></section>
       </main>
     </div>
-  </body>
+</body>
 </html>
