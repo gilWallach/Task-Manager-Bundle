@@ -29,7 +29,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-      inject: 'head', // Ensures the script tag is placed at the end of the body
+      inject: 'body', // Ensures the script tag is placed at the end of the body
     }),
   ],
   devtool: "inline-source-map",
