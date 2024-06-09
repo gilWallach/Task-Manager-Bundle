@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   mode: "production",
@@ -7,7 +8,7 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/Task-Manager-Bundle/",
+    publicPath: "/",
   },
   module: {
     rules: [
@@ -31,6 +32,12 @@ module.exports = {
       template: "./src/index.html",
       inject: 'body', // Ensures the script tag is placed at the end of the body
     }),
+    new CleanWebpackPlugin(), // Ensure dist folder is cleaned before each build
   ],
-  devtool: "inline-source-map",
+  devtool: "source-map",
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    port: 8080,
+  },
 };
